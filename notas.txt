@@ -1,0 +1,67 @@
+venv p/ windows
+python -m venv ./venv
+
+carregando venv windows
+venv/Scripts/activate.ps1
+
+criando dependências de tudo que precisa para o projeto funcionar
+pip freeze > requirements.txt
+
+django
+pip install Django -> instala a última versão
+pip freeze -> certificar que o django foi instalado corretamente
+
+iniciando projeto
+django-admin help -> óbvio
+iniciando
+django-admin startproject nomeProjeto . (dê o nome de setup/config)
+
+subindo servidor
+python manage.py runserver
+
+ctrl + shift + p -> python select interpreter -> versão venv
+
+criando um app
+python manage.py startapp nomeApp
+
+*registre a aplicação pegando o nome do app do arquivo app.py e registrando
+em settings INSTALLED APPS
+
+*acesse o app selecionando o app e registrando uma url criando um novo
+arquivo url na pasta do app
+
+*arquivo view e crie função
+*registre rotas em projeto-url
+
+colectstatic -> endereça para que o django implante
+
+secret key
+pip install python-dotenv
+*gitignore -> site gitignore.io + django
+
+git bash here
+git clone + endereço
+
+subindo projeto no github
+git init 
+git add .
+git commit -m 'nomeProjeto'
+git remote add origin + endereço
+git push origin master
+
+banco de dados
+criar novo servidor usando a máquina (localhost)
+instalar módulo para intermediar django e banco de dados pip install psycopg2
+pip install psycopg2-binary
+
+migrar os dados para o banco de dados
+python manage.py makemigrations
+enviar para o banco de dados
+python manage.py migrate
+
+*criando admin
+
+
+*criando novo usuário
+- usar o method='post' no formulário, para processar informações de formulário
+GET -> obter dado de alguma requisição
